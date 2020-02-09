@@ -23,6 +23,11 @@ function authReducer(state = INITIAL_STATE, action) {
         draft.loading = false;
         break;
       }
+      case '@auth/SIGN_OUT': {
+        draft.token = null;
+        draft.signed = false;
+        break;
+      }
       default:
     }
   });
